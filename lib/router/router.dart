@@ -6,6 +6,7 @@ import 'package:riverpod_watch_many_sample/presentation/screens/combined_provide
 import 'package:riverpod_watch_many_sample/presentation/screens/home/screen.dart';
 import 'package:riverpod_watch_many_sample/presentation/screens/single_watch_split_handle/screen.dart';
 import 'package:riverpod_watch_many_sample/presentation/screens/split_watch/screen.dart';
+import 'package:riverpod_watch_many_sample/presentation/screens/value_or_default/screen.dart';
 
 part 'router.g.dart';
 
@@ -66,6 +67,19 @@ final _goRouter = GoRouter(
         return MaterialPage(
           key: state.pageKey,
           child: const CombinedProviderScreen(),
+        );
+      },
+    ),
+    // ---------------- //
+    // ValueOrDefaultScreen
+    // ---------------- //
+    GoRoute(
+      path: ValueOrDefaultScreen.path,
+      name: ValueOrDefaultScreen.name,
+      pageBuilder: (context, state) {
+        return MaterialPage(
+          key: state.pageKey,
+          child: const ValueOrDefaultScreen(),
         );
       },
     ),
