@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 class ColorListTile extends StatelessWidget {
   const ColorListTile({
     required this.color,
+    this.enabled = true,
     super.key,
   });
 
   final MaterialColor color;
+  final bool enabled;
 
   String get _colorName => switch (color) {
         Colors.red => 'Red',
@@ -25,6 +27,7 @@ class ColorListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      enabled: enabled,
       leading: const Icon(Icons.color_lens),
       title: Text('Color: $_colorName'),
       subtitle: Text(_subtitle),
