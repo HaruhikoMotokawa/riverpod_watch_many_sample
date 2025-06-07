@@ -15,9 +15,11 @@ typedef CombinedProviderScreenState = ({
 
 @riverpod
 Future<CombinedProviderScreenState> combinedProviderScreenState(Ref ref) async {
-  final red = await ref.watch(red1SecondsProvider.future);
-  final blue = await ref.watch(blue3SecondsProvider.future);
-  final yellow = await ref.watch(yellow5SecondsProvider.future);
+  final (red, blue, yellow) = await (
+    ref.watch(red1SecondsProvider.future),
+    ref.watch(blue3SecondsProvider.future),
+    ref.watch(yellow5SecondsProvider.future),
+  ).wait;
 
   return (
     red: red,
