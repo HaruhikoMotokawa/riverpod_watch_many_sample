@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_watch_many_sample/presentation/shared/color_list_tile.dart';
 import 'package:riverpod_watch_many_sample/presentation/state/blue_3_seconds.dart';
 import 'package:riverpod_watch_many_sample/presentation/state/red_1_seconds.dart';
-import 'package:riverpod_watch_many_sample/presentation/state/yellow_10_seconds.dart';
+import 'package:riverpod_watch_many_sample/presentation/state/yellow_5_seconds.dart';
 
 part '_use_screen_state.dart';
 

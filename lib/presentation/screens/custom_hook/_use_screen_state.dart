@@ -15,7 +15,7 @@ _ScreenState _useScreenState(WidgetRef ref) {
   // -------------------- //
   final asyncRed = ref.watch(red1SecondsProvider);
   final asyncBlue = ref.watch(blue3SecondsProvider);
-  final asyncYellow = ref.watch(yellow10SecondsProvider);
+  final asyncYellow = ref.watch(yellow5SecondsProvider);
 
   // -------------------- //
   // AsyncValueから値を取得

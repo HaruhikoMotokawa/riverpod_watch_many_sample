@@ -20,7 +20,7 @@ class ColorListTile extends StatelessWidget {
   String get _subtitle => switch (color) {
         Colors.red => '取得までに1秒かかります',
         Colors.blue => '取得までに3秒かかります',
-        Colors.yellow => '取得までに10秒かかります',
+        Colors.yellow => '取得までに5秒かかります',
         _ => 'unSupported Color',
       };
 
