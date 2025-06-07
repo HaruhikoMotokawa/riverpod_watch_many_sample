@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_watch_many_sample/presentation/screens/combined_provider/screen.dart';
+import 'package:riverpod_watch_many_sample/presentation/screens/cutom_hook/screen.dart';
 import 'package:riverpod_watch_many_sample/presentation/screens/single_watch_split_handle/screen.dart';
 import 'package:riverpod_watch_many_sample/presentation/screens/split_watch/screen.dart';
 import 'package:riverpod_watch_many_sample/presentation/screens/value_or_default/screen.dart';
@@ -18,6 +19,7 @@ class HomeScreen extends StatelessWidget {
         const _ListTile(screenType: _ScreenType.singleWatchSplitHandle),
         const _ListTile(screenType: _ScreenType.combinedProvider),
         const _ListTile(screenType: _ScreenType.valueOrDefault),
+        const _ListTile(screenType: _ScreenType.customHook),
         const SizedBox.shrink(), // Placeholder for spacing
       ];
 
@@ -48,6 +50,7 @@ class _ListTile extends StatelessWidget {
         _ScreenType.singleWatchSplitHandle => SingleWatchSplitHandleScreen.name,
         _ScreenType.combinedProvider => CombinedProviderScreen.name,
         _ScreenType.valueOrDefault => ValueOrDefaultScreen.name,
+        _ScreenType.customHook => CustomHookScreen.name,
       };
 
   String get _screenPath => switch (screenType) {
@@ -55,6 +58,7 @@ class _ListTile extends StatelessWidget {
         _ScreenType.singleWatchSplitHandle => SingleWatchSplitHandleScreen.path,
         _ScreenType.combinedProvider => CombinedProviderScreen.path,
         _ScreenType.valueOrDefault => ValueOrDefaultScreen.path,
+        _ScreenType.customHook => CustomHookScreen.path,
       };
 
   @override
@@ -74,4 +78,5 @@ enum _ScreenType {
   singleWatchSplitHandle,
   combinedProvider,
   valueOrDefault,
+  customHook,
 }
