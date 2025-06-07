@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:riverpod_watch_many_sample/presentation/screens/combined_provider/screen.dart';
-import 'package:riverpod_watch_many_sample/presentation/screens/cutom_hook/screen.dart';
+import 'package:riverpod_watch_many_sample/presentation/screens/custom_hook/screen.dart';
 import 'package:riverpod_watch_many_sample/presentation/screens/home/screen.dart';
 import 'package:riverpod_watch_many_sample/presentation/screens/single_watch_split_handle/screen.dart';
 import 'package:riverpod_watch_many_sample/presentation/screens/split_watch/screen.dart';
