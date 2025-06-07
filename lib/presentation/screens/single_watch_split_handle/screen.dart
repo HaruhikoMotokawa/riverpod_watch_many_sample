@@ -16,6 +16,7 @@ class SingleWatchSplitHandleScreen extends ConsumerWidget {
     final asyncRed = ref.watch(red1SecondsProvider);
     final asyncBlue = ref.watch(blue3SecondsProvider);
     final asyncYellow = ref.watch(yellow5SecondsProvider);
+
     return Scaffold(
       appBar: AppBar(
         title: const Text(name),

@@ -23,6 +23,7 @@ class SplitWatchScreen extends StatelessWidget {
         children: [
           Consumer(builder: (context, ref, child) {
             final asyncRed = ref.watch(red1SecondsProvider);
+
             return switch (asyncRed) {
               AsyncData(value: final red) => ColorListTile(color: red),
               AsyncError() => const Text('Error occurred while fetching color'),
@@ -34,6 +35,7 @@ class SplitWatchScreen extends StatelessWidget {
           }),
           Consumer(builder: (context, ref, child) {
             final asyncBlue = ref.watch(blue3SecondsProvider);
+
             return switch (asyncBlue) {
               AsyncData(value: final blue) => ColorListTile(color: blue),
               AsyncError() => const Text('Error occurred while fetching color'),
@@ -45,6 +47,7 @@ class SplitWatchScreen extends StatelessWidget {
           }),
           Consumer(builder: (context, ref, child) {
             final asyncYellow = ref.watch(yellow5SecondsProvider);
+
             return switch (asyncYellow) {
               AsyncData(value: final yellow) => ColorListTile(color: yellow),
               AsyncError() => const Text('Error occurred while fetching color'),

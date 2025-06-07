@@ -24,9 +24,9 @@ _ScreenState _useScreenState(WidgetRef ref) {
   final blue = asyncBlue.valueOrNull ?? Colors.grey;
   final yellow = asyncYellow.valueOrNull ?? Colors.grey;
 
-  final isRedTileEnabled = !asyncRed.isLoading;
-  final isBlueTileEnabled = !asyncBlue.isLoading;
-  final isYellowTileEnabled = !asyncYellow.isLoading;
+  final isRedTileEnabled = !asyncRed.isLoading && !asyncRed.hasError;
+  final isBlueTileEnabled = !asyncBlue.isLoading && !asyncBlue.hasError;
+  final isYellowTileEnabled = !asyncYellow.isLoading && !asyncYellow.hasError;
 
   // -------------------- //
   // 取得した値を返す

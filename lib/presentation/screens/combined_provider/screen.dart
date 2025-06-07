@@ -12,6 +12,7 @@ class CombinedProviderScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final asyncState = ref.watch(combinedProviderScreenStateProvider);
+
     return Scaffold(
         appBar: AppBar(
           title: const Text(name),
